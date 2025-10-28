@@ -48,17 +48,18 @@ LLMHackathon/
 
 ## 🚀 Quick start
 
-1. Put model solutions under `Sorular/<problem_id>/<ModelName>.py`.
+1. Put model solutions under `Questions/<problem_id>/<ModelName>.py`.
 
    Example:
    ```text
-   Sorular/54/GPT-4o.py
-   Sorular/54/Claude-3.5.py
+   Questions/54/GPT-5.py
+   Questions/54/Claude-Haiku-4.5.py
    ```
 
 2. Ensure each script prints **one single line** with the final numeric answer:
    ```python
-   # Sorular/54/GPT-4o.py
+   Questions/54/GPT-5.py
+   Questions/54/Claude-Haiku-4.5.py
    # ... your computation ...
    print(376)
    ```
@@ -101,16 +102,16 @@ LLMHackathon/
 
 ---
 
-## 📄 CSV schema (`sonuclar.csv`)
+## 📄 CSV schema (`results.csv`)
 
 Each row = one run of `<problem_id>/<model>.py`.
 
 | Column               | Meaning                                  |
 |----------------------|-------------------------------------------|
-| `Soru No`            | Problem id (e.g., `54`)                   |
+| `Question No`        | Problem id (e.g., `54`)                   |
 | `LLM`                | Model name (derived from filename)        |
-| `Çalışma Süresi (s)` | Runtime in seconds, or `timeout` / `hata` |
-| `Çıktı Doğru mu`     | `✅` for correct, `❌ (…reason…)` otherwise |
+| `Execution Time (s)` | Runtime in seconds, or `timeout` / `hata` |
+| `Is Correct    `     | `✅` for correct, `❌ (…reason…)` otherwise |
 
 At the end of a run, the script:
 - writes the CSV,
