@@ -194,4 +194,4 @@ Please keep solutions free of external dependencies (standard library only).
 
 ## 🪪 License
 
-MIT (or your preferred OSS license).
+GNU GENERAL PUBLIC LICENSE
