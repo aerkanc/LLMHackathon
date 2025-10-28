@@ -23,8 +23,8 @@ LLMHackathon/
 ├── runner.py               # main runner (executes, verifies, scores, ranks)
 ├── Sorular/                # problems live here (directory per problem id)
 │   ├── 54/
-│   │   ├── GPT-4o.py
-│   │   └── Claude-3.5.py
+│   │   ├── GPT-5.py
+│   │   └── Claude-Haiku-4.5.py
 │   ├── 81/
 │   │   └── SomeModel.py
 │   └── ...
@@ -125,21 +125,33 @@ At the end of a run, the script:
 Use a disciplined prompt so models produce *computational* code rather than hard-coded answers:
 
 ```text
-You will solve a Project Euler–style problem in a hackathon setting.
+In the attached image, you are given an algorithmic problem in the style of Project Euler.
 
-Rules:
-1) Write Python 3 code that COMPUTES the answer and prints it via `print(...)`.
-2) Do NOT hard-code the final number; your code must derive it.
-3) No debug prints. Only a single final `print(...)`.
-4) The code will run on a Linux machine with 16 CPU cores and 64 GB RAM (and an 8 GB NVIDIA GPU, no custom CUDA).
-5) Standard library is allowed; third-party packages are not.
-6) The judge will run your code and compare stdout with the ground truth.
-7) Your solution must finish within 60 seconds for full credit.
+This is a hackathon challenge. Your code will be executed in an independent evaluation system, and only the value printed via print(...) will be compared with the actual correct answer.
 
-Problem:
-"""
-[INSERT PROBLEM STATEMENT HERE]
-"""
+Your code is expected to compute the answer by itself by solving the given problem.
+
+The execution environment provides the following resources:
+	•	A 16-core multi-processor CPU
+	•	64 GB of RAM
+	•	An NVIDIA GPU with 8 GB of VRAM
+	•	A Linux environment with Python 3.11 installed
+	•	You may use NumPy, multiprocessing, and other standard Python libraries
+	•	You may not use third-party libraries (e.g., sympy, numba, gmpy2, tensorflow)
+
+Please:
+	1.	Analyze the problem and choose an appropriate algorithm.
+	2.	Consider using parallel processing (e.g., multiprocessing) or efficient memory handling to speed up computation.
+	3.	Use fast numerical libraries like numpy when necessary.
+	4.	Write Python 3 code that runs correctly and outputs only the final result using print(...).
+	5.	Do not hardcode the answer in your code; compute it programmatically.
+	6.	Use print(...) only for the final result — no debug or intermediate outputs.
+	7.	The code must finish execution within 60 seconds and produce the correct result.
+
+Notes:
+	•	You are encouraged to utilize multi-core capabilities using tools such as multiprocessing.Pool or concurrent.futures.ProcessPoolExecutor.
+	•	GPU acceleration may indirectly help via NumPy, but direct CUDA programming is not allowed.
+	•	Please do not calculate or provide the final answer yourself — just write the code that computes it.
 ```
 
 ---
