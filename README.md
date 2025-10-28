@@ -21,7 +21,7 @@ Each model’s solution is executed in isolation, runtime is measured, correctne
 ```text
 LLMHackathon/
 ├── runner.py               # main runner (executes, verifies, scores, ranks)
-├── Sorular/                # problems live here (directory per problem id)
+├── Questions/                # problems live here (directory per problem id)
 │   ├── 54/
 │   │   ├── GPT-5.py
 │   │   └── Claude-Haiku-4.5.py
@@ -173,7 +173,7 @@ Notes:
 
 ## ➕ Adding new problems
 
-1. Create a folder: `Sorular/<problem_id>/`
+1. Create a folder: `Questions/<problem_id>/`
 2. Add one or more model files: `*.py`
 3. Add the expected `(answer, difficulty)` to `EXPECTED_OUTPUTS` in `runner.py`
 4. Run `python3 runner.py`
