@@ -12,7 +12,7 @@ Each model’s solution is executed in isolation, runtime is measured, correctne
 - Measures wall-clock time (seconds).
 - Verifies stdout against the expected single value.
 - Applies scoring rules (difficulty points, per-minute late penalty, timeout = zero).
-- Writes a detailed CSV (`sonuclar.csv`) and prints a **ranked leaderboard**.
+- Writes a detailed CSV (`results.csv`) and prints a **ranked leaderboard**.
 
 ---
 
@@ -81,7 +81,7 @@ LLMHackathon/
 
 5. Inspect:
    - Console table (per-run results + leaderboard)
-   - `sonuclar.csv` for archival & post-analysis
+   - `results.csv` for archival & post-analysis
 
 ---
 
