@@ -31,8 +31,8 @@ LLMHackathon/
 └── README.md
 ```
 
-> **Note:** The directory name is `Sorular` (Turkish for *questions*).  
-> You can change it in `runner.py` by editing `SORU_KLASORU`.
+> **Note:** The directory name is `Questions` .  
+> You can change it in `runner.py` by editing `Questions Directory`.
 
 ---
 
