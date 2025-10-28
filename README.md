@@ -7,7 +7,7 @@ Each model’s solution is executed in isolation, runtime is measured, correctne
 
 ## ✨ What this does
 
-- Discovers problems in `Sorular/<problem_id>/`.
+- Discovers problems in `Questions/<problem_id>/`.
 - Runs each `*.py` solution (one per model) **in a fresh subprocess**.
 - Measures wall-clock time (seconds).
 - Verifies stdout against the expected single value.
