@@ -10,26 +10,30 @@ QUESTION_DIR = "Questions"
 RESULT_CSV = "results.csv"
 
 EXPECTED_OUTPUTS = {
-    "54":  ("376", 10),
+    "54":  ("376", 27.5),
     "74":  ("402", 15),
-    "81":  ("427337", 10),
-    "92":  ("8581146", 15),
-    "99":  ("709", 10),
-    "112": ("1587000", 25),
-    "145": ("608720", 15),
-    "172": ("227485267000992000", 55),
-    "190": ("17427258", 30),
-    "206": ("1389019170", 40),
-    "231": ("7526965179680", 60),
-    "301": ("2178309", 70),
-    "357": ("1739023853137", 65),
-    "399": ("1508395636674243,6.5e27330467", 45),
-    "439": ("968697378", 100),
-    "493": ("6.818741802", 85),
-    "505": ("302980501465712", 95),
+    "81":  ("427337", 37.5),
+    "92":  ("8581146", 25),
+    "99":  ("709", 17.5),
+    "112": ("1587000", 20),
+    "145": ("608720", 35),
+    "172": ("227485267000992000", 71.25),
+    "187": ("17427258", 55),
+    "190": ("371048281", 53.75),
+    "206": ("1389019170", 38.75),
+    "231": ("7526965179680", 45),
+    "301": ("2178309", 27.5),
+    "347": ("11109800204052", 56.25),
+    "357": ("1739023853137", 57.5),
+    "399": ("1508395636674243,6.5e27330467", 80),
+    "439": ("968697378", 97.5),
+    "493": ("6.818741802", 57.5),
+    "502": ("749485217", 98.75),
+    "505": ("714591308667615832", 88.75),
 }
 
 TIMEOUT = 600  # 10 minutes
+EQUAL_POINT = 100  # eşit ağırlıklı puan
 
 def run_code(filepath, expected_output):
     try:
@@ -48,7 +52,8 @@ def run_code(filepath, expected_output):
     except subprocess.TimeoutExpired:
         return "timeout", "Time Out", False
     except Exception as e:
-        return "Error", str(e), False
+        # Normalize to a clear marker
+        return "error", str(e), False
 
 def export_result_csv(table):
     with open(RESULT_CSV, mode='w', newline='', encoding='utf-8') as f:
@@ -56,33 +61,73 @@ def export_result_csv(table):
         writer.writeheader()
         writer.writerows(table)
 
+def _score_for_time(base_point, exec_time):
+    """
+    60 sn'ye kadar ceza yok.
+    60 sn üzeri her TAM dakika için 10 puan ceza (ceil ile yukarı yuvarlanır).
+    Alt sınır 0.
+    """
+    if isinstance(exec_time, str):
+        # timeout / error
+        return 0.0
+    t = float(exec_time)
+    if t <= 60:
+        return float(base_point)
+    penalty = math.ceil((t - 60) / 60) * 10
+    return max(0.0, float(base_point) - penalty)
+
 def calculate_scores(csv_path):
-    points = defaultdict(float)
+    """
+    İki ayrı toplam döndürür:
+      - weighted_points: EXPECTED_OUTPUTS'deki zorluk puanlarına göre
+      - equal_points: her soru 100 puan kabul edilirse
+    Geri dönüş: (weighted_sorted, equal_sorted)
+    """
+    weighted_points = defaultdict(float)
+    equal_points = defaultdict(float)
+
     with open(csv_path, mode='r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             question = row["Question No"]
             llm = row["LLM"]
-            sure = row["Execution Time (s)"]
-            correction = row["Is Correct"].startswith("✅")
-            expected_output, difficulty_point = EXPECTED_OUTPUTS.get(question, ("", 0))
+            sure_raw = row["Execution Time (s)"]
+            is_correct = row["Is Correct"].startswith("✅")
 
-            if correction:
-                if isinstance(sure, str) and (sure == "timeout" or sure == "error"):
-                    scor = 0
+            # Normalize execution time field
+            if isinstance(sure_raw, str):
+                sr = sure_raw.strip().lower()
+                if sr in ("timeout", "time out"):
+                    exec_time = "timeout"
+                elif sr in ("error",):
+                    exec_time = "error"
                 else:
-                    sure = float(sure)
-                    if sure <= 60:
-                        scor = difficulty_point
-                    else:
-                        penalty = math.ceil((sure - 60) / 60) * 10
-                        scor = max(0, difficulty_point - penalty)
+                    # try parse float if possible
+                    try:
+                        exec_time = float(sure_raw)
+                    except:
+                        exec_time = "error"
             else:
-                scor = 0
+                exec_time = float(sure_raw)
 
-            points[llm] += scor
+            expected_tuple = EXPECTED_OUTPUTS.get(question)
+            if not expected_tuple:
+                # soruya puan tablomuz yoksa bu soruyu skorlamadan geç
+                continue
 
-    return sorted(points.items(), key=lambda x: x[1], reverse=True)
+            expected_output, difficulty_point = expected_tuple
+
+            if not is_correct:
+                # yanlışsa her iki tabloda da puan 0
+                continue
+
+            # Doğruysa puan hesapla
+            weighted_points[llm] += _score_for_time(difficulty_point, exec_time)
+            equal_points[llm] += _score_for_time(EQUAL_POINT, exec_time)
+
+    weighted_sorted = sorted(weighted_points.items(), key=lambda x: x[1], reverse=True)
+    equal_sorted = sorted(equal_points.items(), key=lambda x: x[1], reverse=True)
+    return weighted_sorted, equal_sorted
 
 def main():
     table = []
@@ -105,19 +150,23 @@ def main():
                 })
 
     if not table:
-        print("No any results found.")
+        print("No results found.")
         return
 
     export_result_csv(table)
 
     print("\n📊 Test Results:")
     for row in table:
-        print(f"{row['Question No']:>4} | {row['LLM']:<15} | {row['Execution Time (s)']:<10} | {row['Is Correct']}")
+        print(f"{row['Question No']:>4} | {row['LLM']:<25} | {row['Execution Time (s)']:<10} | {row['Is Correct']}")
 
-    print("\n🏆 LLM Scor Order:")
-    ordered_point = calculate_scores(RESULT_CSV)
-    for order, (llm, point) in enumerate(ordered_point, 1):
-        print(f"{order:>2}. {llm:<15} {point:.2f} point")
+    print("\n🏆 LLM Score Order (Weighted by difficulty):")
+    weighted, equal = calculate_scores(RESULT_CSV)
+    for order, (llm, point) in enumerate(weighted, 1):
+        print(f"{order:>2}. {llm:<25} {point:.2f} pts")
+
+    print("\n🏁 LLM Score Order (All questions equal — 100 pts each):")
+    for order, (llm, point) in enumerate(equal, 1):
+        print(f"{order:>2}. {llm:<25} {point:.2f} pts")
 
 if __name__ == "__main__":
     main()

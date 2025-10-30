@@ -1,0 +1,92 @@
+Question No,LLM,Execution Time (s),Is Correct
+112,ChatGPT-5,1.94,✅
+112,Claude-Haiku-4.5,3.667,✅
+112,DeepSeek-2025-10,0.112,❌ ()
+112,Gemini-Flash-2.5-pro,1.797,✅
+145,ChatGPT-5,0.104,✅
+145,Claude-Haiku-4.5,213.857,✅
+145,DeepSeek-2025-10,0.489,❌ (227485267000992000)
+145,Gemini-Flash-2.5-pro,184.367,✅
+172,ChatGPT-5,0.452,✅
+172,Claude-Haiku-4.5,5.537,✅
+172,DeepSeek-2025-10,0.104,❌ ()
+172,Gemini-Flash-2.5-pro,0.102,✅
+187,ChatGPT-5,0.102,❌ ()
+187,Claude-Haiku-4.5,44.596,✅
+187,DeepSeek-2025-10,0.099,❌ ()
+187,Gemini-Flash-2.5-pro,0.098,❌ ()
+190,ChatGPT-5,0.103,✅
+190,Claude-Haiku-4.5,0.098,✅
+190,DeepSeek-2025-10,0.096,✅
+190,Gemini-Flash-2.5-pro,0.101,❌ ()
+206,ChatGPT-5,0.1,❌ ()
+206,Claude-Haiku-4.5,30.79,✅
+206,DeepSeek-2025-10,0.142,❌ ()
+206,Gemini-Flash-2.5-pro,2.076,❌ ()
+231,ChatGPT-5,1.261,✅
+231,Claude-Haiku-4.5,3.873,❌ (5536738690946)
+231,DeepSeek-2025-10,0.105,❌ ()
+231,Gemini-Flash-2.5-pro,0.096,❌ ()
+301,ChatGPT-5,0.101,✅
+301,Claude-Haiku-4.5,24.773,✅
+301,DeepSeek-2025-10,0.12,✅
+301,Gemini-Flash-2.5-pro,0.101,✅
+347,ChatGPT-5,7.442,✅
+347,Claude-Haiku-4.5,4.619,✅
+347,DeepSeek-2025-10,0.097,❌ ()
+347,Gemini-Flash-2.5-pro,0.098,❌ ()
+357,ChatGPT-5,0.105,❌ ()
+357,Claude-Haiku-4.5,0.102,❌ ()
+357,DeepSeek-2025-10,0.104,❌ ()
+357,Gemini-Flash-2.5-pro,0.098,❌ ()
+399,ChatGPT-5,0.098,❌ ()
+399,Claude-Haiku-4.5,timeout,❌ (Time Out)
+399,DeepSeek-2025-10,0.114,❌ ()
+399,Gemini-Flash-2.5-pro,7.412,"❌ (9158128796692261,3.1e27328088)"
+439,ChatGPT-5,164.1,❌ ()
+439,Claude-Haiku-4.5,timeout,❌ (Time Out)
+439,DeepSeek-2025-10,2.169,❌ ()
+439,Gemini-Flash-2.5-pro,1.234,❌ ()
+493,ChatGPT-5,0.646,❌ ()
+493,Claude-Haiku-4.5,0.558,❌ ()
+493,DeepSeek-2025-10,0.695,✅
+493,Gemini-Flash-2.5-pro,0.664,✅
+502,ChatGPT-5,0.777,❌ ()
+502,Claude-Haiku-4.5,188.115,"❌ (Test cases:
+F(4, 2) = 10 (expected: 10)
+F(13, 10) = 3729050610636 (expected: 3729050610636)
+F(10, 13) = 37959702514 (expected: 37959702514)
+
+For the final answer: F(10^12, 100) + F(100000, 100000) + F(100, 10^12)
+requires mathematical algorithms for large w values beyond bitmask DP.
+
+The problem requires advanced techniques such as:
+- Shape-based configuration enumeration
+- Generating functions for configuration counting
+- Mathematical optimization for specific problem structure)"
+502,DeepSeek-2025-10,0.669,❌ (21569431)
+502,Gemini-Flash-2.5-pro,0.697,❌ (525741794)
+505,ChatGPT-5,timeout,❌ (Time Out)
+505,Claude-Haiku-4.5,timeout,❌ (Time Out)
+505,DeepSeek-2025-10,1.119,❌ ()
+505,Gemini-Flash-2.5-pro,0.722,❌ (944972997119722000)
+54,ChatGPT-5,0.741,❌ ()
+54,Claude-Haiku-4.5,1.267,❌ ()
+54,DeepSeek-2025-10,1.264,❌ ()
+54,Gemini-Flash-2.5-pro,0.677,❌ ()
+74,ChatGPT-5,8.752,✅
+74,Claude-Haiku-4.5,12.127,✅
+74,DeepSeek-2025-10,0.578,❌ ()
+74,Gemini-Flash-2.5-pro,10.472,✅
+81,ChatGPT-5,0.65,❌ ()
+81,Claude-Haiku-4.5,0.9,✅
+81,DeepSeek-2025-10,0.869,❌ ()
+81,Gemini-Flash-2.5-pro,0.533,❌ ()
+92,ChatGPT-5,timeout,❌ (Time Out)
+92,Claude-Haiku-4.5,48.131,✅
+92,DeepSeek-2025-10,0.75,❌ ()
+92,Gemini-Flash-2.5-pro,4.596,✅
+99,ChatGPT-5,0.714,❌ ()
+99,Claude-Haiku-4.5,0.705,❌ ()
+99,DeepSeek-2025-10,0.709,❌ ()
+99,Gemini-Flash-2.5-pro,0.697,❌ ()
