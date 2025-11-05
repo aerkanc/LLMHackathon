@@ -16,7 +16,7 @@ Each model’s solution is executed in isolation, runtime is measured, correctne
 
 ---
 
-## 🏆 Örnek Sonuçlar ve Liderlik Tablosu
+## 🏆 Sample Results and Leaderboard
 
 ```text
 📊 Test Results:
