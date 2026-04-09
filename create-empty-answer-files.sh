@@ -14,10 +14,10 @@ if [[ ! -d "$BASE_DIR" ]]; then
 fi
 
 declare -a FILES=(
-  "Gemini-Flash-2.5-pro.py"
-  "Claude-Haiku-4.5.py"
-  "ChatGPT-5.py"
-  "DeepSeek-2025-10.py"
+  "Gemini-3.1-Pro.py"
+  "Claude-Opus-4.6.py"
+  "ChatGPT-5.4.py"
+  "DeepSeek-V3.2.py"
 )
 
 # Default template for Python files

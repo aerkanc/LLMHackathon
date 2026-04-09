@@ -27,13 +27,13 @@ def check_number(args):
 
 def main():
     limit = 100000000
-    print("Computing primes...")
+    # print("Computing primes...")
 
     # We need primes up to limit + limit (for the case d=1, n/d could be up to limit)
     max_prime_needed = limit + limit // 2
     is_prime = sieve(max_prime_needed)
 
-    print("Finding candidate numbers...")
+    # print("Finding candidate numbers...")
 
     # Candidate numbers are n where n+1 is prime (from d=1 condition)
     candidates = []
@@ -41,7 +41,7 @@ def main():
         if is_prime[p] and p - 1 <= limit:
             candidates.append(p - 1)
 
-    print(f"Checking {len(candidates)} candidates...")
+    # print(f"Checking {len(candidates)} candidates...")
 
     # Use multiprocessing to check candidates in parallel
     with mp.Pool(processes=mp.cpu_count()) as pool:

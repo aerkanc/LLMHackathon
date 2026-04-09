@@ -1,5 +1,4 @@
 import multiprocessing as mp
-import numpy as np
 
 
 def is_bouncy(n):
@@ -42,7 +41,7 @@ def find_99_percent_point():
     total_bouncy = 0
 
     # First, get the count up to our starting point
-    print("Calculating initial bouncy count up to 21780...")
+    # print("Calculating initial bouncy count up to 21780...")
     with mp.Pool(processes=num_processes) as pool:
         ranges = []
         for i in range(0, 21780, chunk_size):
@@ -53,7 +52,7 @@ def find_99_percent_point():
         results = pool.map(count_bouncy_in_range, ranges)
         total_bouncy = sum(results)
 
-    print(f"At n=21780: {total_bouncy} bouncy numbers ({total_bouncy / 21780 * 100:.2f}%)")
+    # print(f"At n=21780: {total_bouncy} bouncy numbers ({total_bouncy / 21780 * 100:.2f}%)")
 
     # Now search for the 99% point
     current_n = 21780
@@ -84,12 +83,13 @@ def find_99_percent_point():
 
         # Progress monitoring
         if current_n % 100000 == 0:
-            print(f"At n={current_n}: {total_bouncy} bouncy numbers ({proportion * 100:.4f}%)")
+            # print(f"At n={current_n}: {total_bouncy} bouncy numbers ({proportion * 100:.4f}%)")
+            pass
 
         # If we're close to 99%, switch to finer granularity
         if proportion >= 0.989:
             # Switch to checking individual numbers
-            print(f"Close to target at n={current_n} ({proportion * 100:.4f}%), switching to fine search...")
+            # print(f"Close to target at n={current_n} ({proportion * 100:.4f}%), switching to fine search...")
 
             while True:
                 current_n += 1
@@ -101,7 +101,7 @@ def find_99_percent_point():
 
                 if current_n % 1000 == 0:
                     proportion = total_bouncy / current_n
-                    print(f"Fine search at n={current_n}: {total_bouncy} bouncy numbers ({proportion * 100:.4f}%)")
+                    # print(f"Fine search at n={current_n}: {total_bouncy} bouncy numbers ({proportion * 100:.4f}%)")
 
 
 if __name__ == "__main__":

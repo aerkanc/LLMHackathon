@@ -16,117 +16,62 @@ Each model’s solution is executed in isolation, runtime is measured, correctne
 
 ---
 
-## 🏆 Sample Results and Leaderboard
+## 🏆 Current Results Snapshot
 
-```text
-📊 Test Results:
- 112 | ChatGPT-5                 | 1.94       | ✅
- 112 | Claude-Haiku-4.5          | 3.667      | ✅
- 112 | DeepSeek-2025-10          | 0.112      | ❌ ()
- 112 | Gemini-Flash-2.5-pro      | 1.797      | ✅
- 145 | ChatGPT-5                 | 0.104      | ✅
- 145 | Claude-Haiku-4.5          | 213.857    | ✅
- 145 | DeepSeek-2025-10          | 0.489      | ❌ (227485267000992000)
- 145 | Gemini-Flash-2.5-pro      | 184.367    | ✅
- 172 | ChatGPT-5                 | 0.452      | ✅
- 172 | Claude-Haiku-4.5          | 5.537      | ✅
- 172 | DeepSeek-2025-10          | 0.104      | ❌ ()
- 172 | Gemini-Flash-2.5-pro      | 0.102      | ✅
- 187 | ChatGPT-5                 | 0.102      | ❌ ()
- 187 | Claude-Haiku-4.5          | 44.596     | ✅
- 187 | DeepSeek-2025-10          | 0.099      | ❌ ()
- 187 | Gemini-Flash-2.5-pro      | 0.098      | ❌ ()
- 190 | ChatGPT-5                 | 0.103      | ✅
- 190 | Claude-Haiku-4.5          | 0.098      | ✅
- 190 | DeepSeek-2025-10          | 0.096      | ✅
- 190 | Gemini-Flash-2.5-pro      | 0.101      | ❌ ()
- 206 | ChatGPT-5      _          | 0.1        | ❌ ()
- 206 | Claude-Haiku-4.5          | 30.79      | ✅
- 206 | DeepSeek-2025-10          | 0.142      | ❌ ()
- 206 | Gemini-Flash-2.5-pro      | 2.076      | ❌ ()
- 231 | ChatGPT-5                 | 1.261      | ✅
- 231 | Claude-Haiku-4.5          | 3.873      | ❌ (5536738690946)
- 231 | DeepSeek-2025-10          | 0.105      | ❌ ()
- 231 | Gemini-Flash-2.5-pro      | 0.096      | ❌ ()
- 301 | ChatGPT-5                 | 0.101      | ✅
- 301 | Claude-Haiku-4.5          | 24.773     | ✅
- 301 | DeepSeek-2025-10          | 0.12       | ✅
- 301 | Gemini-Flash-2.5-pro      | 0.101      | ✅
- 347 | ChatGPT-5                 | 7.442      | ✅
- 347 | Claude-Haiku-4.5          | 4.619      | ✅
- 347 | DeepSeek-2025-10          | 0.097      | ❌ ()
- 347 | Gemini-Flash-2.5-pro      | 0.098      | ❌ ()
- 357 | ChatGPT-5                 | 0.105      | ❌ ()
- 357 | Claude-Haiku-4.5          | 0.102      | ❌ ()
- 357 | DeepSeek-2025-10          | 0.104      | ❌ ()
- 357 | Gemini-Flash-2.5-pro      | 0.098      | ❌ ()
- 399 | ChatGPT-5                 | 0.098      | ❌ ()
- 399 | Claude-Haiku-4.5          | timeout    | ❌ (Time Out)
- 399 | DeepSeek-2025-10          | 0.114      | ❌ ()
- 399 | Gemini-Flash-2.5-pro      | 7.412      | ❌ (9158128796692261,3.1e27328088)
- 439 | ChatGPT-5                 | 164.1      | ❌ ()
- 439 | Claude-Haiku-4.5        _ | timeout    | ❌ (Time Out)
- 439 | DeepSeek-2025-10          | 2.169      | ❌ ()
- 439 | Gemini-Flash-2.5-pro      | 1.234      | ❌ ()
- 493 | ChatGPT-5                 | 0.646      | ❌ ()
- 493 | Claude-Haiku-4.5          | 0.558      | ❌ ()
- 493 | DeepSeek-2025-10          | 0.695      | ✅
- 493 | Gemini-Flash-2.5-pro      | 0.664      | ✅
- 502 | ChatGPT-5                 | 0.777      | ❌ ()
- 502 | Claude-Haiku-4.5          | 188.115    | ❌ (Test cases:
-F(4, 2) = 10 (expected: 10)
-F(13, 10) = 3729050610636 (expected: 3729050610636)
-F(10, 13) = 37959702514 (expected: 37959702514)
+Snapshot source: the repository's current `results.csv` on **April 8, 2026**.
 
-For the final answer: F(10^12, 100) + F(100000, 100000) + F(100, 10^12)
-requires mathematical algorithms for large w values beyond bitmask DP.
+- Coverage: **20 problems x 8 models = 160 runs**
+- Current model set:
+  `ChatGPT-5`, `ChatGPT-5.4`, `Claude-Haiku-4.5`, `Claude-Opus-4.6`,
+  `DeepSeek-2025-10`, `DeepSeek-V3.2`, `Gemini-3.1-Pro`, `Gemini-Flash-2.5-pro`
 
-The problem requires advanced techniques such as:
-- Shape-based configuration enumeration
-- Generating functions for configuration counting
-- Mathematical optimization for specific problem structure)
- 502 | DeepSeek-2025-10          | 0.669      | ❌ (21569431)
- 502 | Gemini-Flash-2.5-pro      | 0.697      | ❌ (525741794)
- 505 | ChatGPT-5                 | timeout    | ❌ (Time Out)
- 505 | Claude-Haiku-4.5          | timeout    | ❌ (Time Out)
- 505 | DeepSeek-2025-10          | 1.119      | ❌ ()
- 505 | Gemini-Flash-2.5-pro      | 0.722      | ❌ (944972997119722000)
-  54 | ChatGPT-5                 | 0.741      | ❌ ()
-  54 | Claude-Haiku-4.5          | 1.267      | ❌ ()
-  54 | DeepSeek-2025-10          | 1.264      | ❌ ()
-  54 | Gemini-Flash-2.5-pro      | 0.677      | ❌ ()
-  74 | ChatGPT-5                 | 8.752      | ✅
-  74 | Claude-Haiku-4.5          | 12.127     | ✅
-  74 | DeepSeek-2025-10          | 0.578      | ❌ ()
-  74 | Gemini-Flash-2.5-pro      | 10.472     | ✅
-  81 | ChatGPT-5                 | 0.65       | ❌ ()
-  81 | Claude-Haiku-4.5          | 0.9        | ✅
-  81 | DeepSeek-2025-10        t | 0.869      | ❌ ()
-  81 | Gemini-Flash-2.5-pro      | 0.533      | ❌ ()
-  92 | ChatGPT-5                 | timeout    | ❌ (Time Out)
-  92 | Claude-Haiku-4.5          | 48.131     | ✅
-  92 | DeepSeek-2025-10          | 0.75       | ❌ ()
-  92 | Gemini-Flash-2.5-pro      | 4.596      | ✅
-  99 | ChatGPT-5                 | 0.714      | ❌ ()
-  99 | Claude-Haiku-4.5          | 0.705      | ❌ ()
-  99 | DeepSeek-2025-10          | 0.709    s | ❌ ()
-  99 | Gemini-Flash-2.5-pro      | 0.697      | ❌ ()
+### Weighted Leaderboard
 
-🏆 LLM Score Order (Weighted by difficulty):
- 1. Claude-Haiku-4.5          405.00 pts
- 2. ChatGPT-5                 323.75 pts
- 3. Gemini-Flash-2.5-pro      221.25 pts
- 4. DeepSeek-2025-10          138.75 pts
+| Rank | Model | Score |
+|------|-------|-------|
+| 1 | `Gemini-3.1-Pro` | `828.75` |
+| 2 | `Claude-Opus-4.6` | `753.75` |
+| 3 | `ChatGPT-5.4` | `653.75` |
+| 4 | `DeepSeek-V3.2` | `595.00` |
+| 5 | `Claude-Haiku-4.5` | `520.00` |
+| 6 | `Gemini-Flash-2.5-pro` | `498.75` |
+| 7 | `ChatGPT-5` | `493.75` |
+| 8 | `DeepSeek-2025-10` | `347.50` |
 
-🏁 LLM Score Order (All questions equal — 100 pts each):
-Text
- 1. Claude-Haiku-4.5          1070.00 pts
- 2. ChatGPT-5                 800.00 pts
- 3. Gemini-Flash-2.5-pro      670.00 pts
- 4. DeepSeek-2025-10          300.00 pts
+### Equal-Points Leaderboard
 
----
-```
+| Rank | Model | Score |
+|------|-------|-------|
+| 1 | `Gemini-3.1-Pro` | `1750.00` |
+| 2 | `Claude-Opus-4.6` | `1600.00` |
+| 3 | `ChatGPT-5.4` | `1500.00` |
+| 4 | `DeepSeek-V3.2` | `1400.00` |
+| 5 | `Claude-Haiku-4.5` | `1270.00` |
+| 6 | `Gemini-Flash-2.5-pro` | `1180.00` |
+| 7 | `ChatGPT-5` | `1100.00` |
+| 8 | `DeepSeek-2025-10` | `800.00` |
+
+### Correct Solutions by Model
+
+| Model | Correct / 20 | Accuracy |
+|-------|--------------|----------|
+| `Gemini-3.1-Pro` | `18 / 20` | `90%` |
+| `Claude-Opus-4.6` | `16 / 20` | `80%` |
+| `ChatGPT-5.4` | `15 / 20` | `75%` |
+| `DeepSeek-V3.2` | `14 / 20` | `70%` |
+| `Claude-Haiku-4.5` | `13 / 20` | `65%` |
+| `Gemini-Flash-2.5-pro` | `12 / 20` | `60%` |
+| `ChatGPT-5` | `11 / 20` | `55%` |
+| `DeepSeek-2025-10` | `8 / 20` | `40%` |
+
+### Per-Question Snapshot
+
+- Solved by all 8 models: `74`, `112`, `172`, `190`, `301`, `357`, `493`
+- Solved by exactly 1 model: `54`, `439`
+- Solved by no model yet: `505`
+- Toughest partially-solved problems in this snapshot: `399` (`3 / 8`), `502` (`2 / 8`), `81` (`3 / 8`)
+
+For full per-run detail, see `results.csv`.
 
 ## 📁 Repository layout
 
@@ -154,7 +99,7 @@ LLMHackathon/
 - Same machine for all runs (so timing is comparable)
 - Model solutions must print **only** the final answer via `print(...)`
 - No interactive input; no network access
-- Standard library only (no third-party packages)
+- Standard library is preferred; `numpy` is available when it materially helps
 
 ---
 
@@ -222,7 +167,7 @@ Each row = one run of `<problem_id>/<model>.py`.
 |----------------------|-------------------------------------------|
 | `Question No`        | Problem id (e.g., `54`)                   |
 | `LLM`                | Model name (derived from filename)        |
-| `Execution Time (s)` | Runtime in seconds, or `timeout` / `hata` |
+| `Execution Time (s)` | Runtime in seconds, or `timeout` / `error` |
 | `Is Correct    `     | `✅` for correct, `❌ (…reason…)` otherwise |
 
 At the end of a run, the script:
