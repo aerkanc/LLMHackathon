@@ -1,114 +1,111 @@
 Question No,LLM,Execution Time (s),Is Correct
-112,ChatGPT-5.4,1.222,✅
-112,ChatGPT-5,1.297,✅
-112,Claude-Haiku-4.5,2.997,✅
-112,Claude-Opus-4.6,1.497,✅
-112,DeepSeek-2025-10,2.994,✅
-112,DeepSeek-V3.2,0.719,✅
-112,Gemini-3.1-Pro,0.622,✅
-112,Gemini-Flash-2.5-pro,1.202,✅
-145,ChatGPT-5.4,0.153,✅
-145,ChatGPT-5,0.154,✅
-145,Claude-Haiku-4.5,163.388,✅
-145,Claude-Opus-4.6,1.523,✅
-145,DeepSeek-2025-10,0.378,❌ (227485267000992000)
-145,DeepSeek-V3.2,0.151,✅
-145,Gemini-3.1-Pro,1.048,✅
-145,Gemini-Flash-2.5-pro,138.457,✅
-172,ChatGPT-5.4,0.152,✅
-172,ChatGPT-5,0.387,✅
-172,Claude-Haiku-4.5,3.663,✅
-172,Claude-Opus-4.6,0.157,✅
-172,DeepSeek-2025-10,0.157,✅
-172,DeepSeek-V3.2,0.155,✅
-172,Gemini-3.1-Pro,0.156,✅
-172,Gemini-Flash-2.5-pro,0.153,✅
-187,ChatGPT-5.4,1.933,✅
-187,ChatGPT-5,2.232,✅
-187,Claude-Haiku-4.5,29.494,✅
-187,Claude-Opus-4.6,0.569,✅
-187,DeepSeek-2025-10,2.471,"❌ (Generating primes...
-Generated 3001134 primes
-Processing 1229 small primes
-17427258)"
-187,DeepSeek-V3.2,1.244,✅
-187,Gemini-3.1-Pro,0.298,✅
-187,Gemini-Flash-2.5-pro,3.409,✅
-190,ChatGPT-5.4,0.151,✅
-190,ChatGPT-5,0.152,✅
-190,Claude-Haiku-4.5,0.149,✅
-190,Claude-Opus-4.6,0.173,✅
-190,DeepSeek-2025-10,0.155,✅
-190,DeepSeek-V3.2,0.151,✅
-190,Gemini-3.1-Pro,0.154,✅
-190,Gemini-Flash-2.5-pro,0.512,✅
-206,ChatGPT-5.4,2.917,❌ ()
-206,ChatGPT-5,3.513,❌ ()
-206,Claude-Haiku-4.5,26.698,✅
-206,Claude-Opus-4.6,0.56,✅
-206,DeepSeek-2025-10,0.175,❌ ()
-206,DeepSeek-V3.2,1.921,✅
-206,Gemini-3.1-Pro,0.493,✅
-206,Gemini-Flash-2.5-pro,1.696,❌ ()
-231,ChatGPT-5.4,1.579,✅
-231,ChatGPT-5,1.075,✅
-231,Claude-Haiku-4.5,2.772,❌ (5536738690946)
-231,Claude-Opus-4.6,0.283,✅
-231,DeepSeek-2025-10,0.47,✅
-231,DeepSeek-V3.2,1.426,✅
-231,Gemini-3.1-Pro,1.189,✅
-231,Gemini-Flash-2.5-pro,8.814,✅
-301,ChatGPT-5.4,0.149,✅
-301,ChatGPT-5,0.151,✅
-301,Claude-Haiku-4.5,21.02,✅
-301,Claude-Opus-4.6,0.149,✅
-301,DeepSeek-2025-10,0.155,✅
-301,DeepSeek-V3.2,0.149,✅
-301,Gemini-3.1-Pro,0.155,✅
-301,Gemini-Flash-2.5-pro,0.168,✅
-347,ChatGPT-5.4,0.724,✅
-347,ChatGPT-5,5.006,✅
-347,Claude-Haiku-4.5,3.131,✅
-347,Claude-Opus-4.6,0.509,✅
-347,DeepSeek-2025-10,12.129,❌ (1005865620884886)
-347,DeepSeek-V3.2,2.215,✅
-347,Gemini-3.1-Pro,0.876,✅
-347,Gemini-Flash-2.5-pro,2.352,✅
-357,ChatGPT-5.4,16.795,✅
-357,ChatGPT-5,6.296,✅
-357,Claude-Haiku-4.5,6.524,✅
-357,Claude-Opus-4.6,3.103,✅
-357,DeepSeek-2025-10,22.949,✅
-357,DeepSeek-V3.2,3.308,✅
-357,Gemini-3.1-Pro,6.442,✅
-357,Gemini-Flash-2.5-pro,12.863,✅
-399,ChatGPT-5.4,18.044,✅
-399,ChatGPT-5,0.378,❌ ()
+112,ChatGPT-5.4,2.546,✅
+112,ChatGPT-5,3.051,✅
+112,Claude-Haiku-4.5,5.883,✅
+112,Claude-Opus-4.6,3.283,✅
+112,DeepSeek-2025-10,0.198,❌ ()
+112,DeepSeek-V3.2,2.406,✅
+112,Gemini-3.1-Pro,2.052,✅
+112,Gemini-Flash-2.5-pro,3.541,✅
+145,ChatGPT-5.4,0.03,✅
+145,ChatGPT-5,0.023,✅
+145,Claude-Haiku-4.5,0.105,❌ ()
+145,Claude-Opus-4.6,4.472,✅
+145,DeepSeek-2025-10,0.645,❌ (227485267000992000)
+145,DeepSeek-V3.2,0.043,✅
+145,Gemini-3.1-Pro,0.053,❌ ()
+145,Gemini-Flash-2.5-pro,0.05,❌ (0)
+172,ChatGPT-5.4,0.017,✅
+172,ChatGPT-5,0.585,✅
+172,Claude-Haiku-4.5,8.308,✅
+172,Claude-Opus-4.6,0.07,✅
+172,DeepSeek-2025-10,0.027,❌ ()
+172,DeepSeek-V3.2,0.018,✅
+172,Gemini-3.1-Pro,0.023,✅
+172,Gemini-Flash-2.5-pro,0.024,✅
+187,ChatGPT-5.4,4.32,✅
+187,ChatGPT-5,0.03,❌ ()
+187,Claude-Haiku-4.5,64.02,✅
+187,Claude-Opus-4.6,0.036,❌ ()
+187,DeepSeek-2025-10,0.019,❌ ()
+187,DeepSeek-V3.2,2.512,✅
+187,Gemini-3.1-Pro,0.016,❌ ()
+187,Gemini-Flash-2.5-pro,0.016,❌ ()
+190,ChatGPT-5.4,0.017,✅
+190,ChatGPT-5,0.028,✅
+190,Claude-Haiku-4.5,0.045,✅
+190,Claude-Opus-4.6,0.021,✅
+190,DeepSeek-2025-10,0.029,✅
+190,DeepSeek-V3.2,0.018,✅
+190,Gemini-3.1-Pro,0.061,✅
+190,Gemini-Flash-2.5-pro,0.046,❌ ()
+206,ChatGPT-5.4,6.032,❌ ()
+206,ChatGPT-5,6.315,❌ ()
+206,Claude-Haiku-4.5,0.062,❌ ()
+206,Claude-Opus-4.6,0.957,✅
+206,DeepSeek-2025-10,0.02,❌ ()
+206,DeepSeek-V3.2,5.493,✅
+206,Gemini-3.1-Pro,0.081,❌ ()
+206,Gemini-Flash-2.5-pro,3.67,❌ ()
+231,ChatGPT-5.4,3.349,✅
+231,ChatGPT-5,2.047,✅
+231,Claude-Haiku-4.5,4.739,❌ ()
+231,Claude-Opus-4.6,0.016,❌ ()
+231,DeepSeek-2025-10,0.019,❌ ()
+231,DeepSeek-V3.2,1.876,✅
+231,Gemini-3.1-Pro,2.351,✅
+231,Gemini-Flash-2.5-pro,0.017,❌ ()
+301,ChatGPT-5.4,0.015,✅
+301,ChatGPT-5,0.015,✅
+301,Claude-Haiku-4.5,0.057,❌ ()
+301,Claude-Opus-4.6,0.015,✅
+301,DeepSeek-2025-10,0.015,✅
+301,DeepSeek-V3.2,0.015,✅
+301,Gemini-3.1-Pro,0.015,✅
+301,Gemini-Flash-2.5-pro,0.016,✅
+347,ChatGPT-5.4,1.482,✅
+347,ChatGPT-5,13.972,✅
+347,Claude-Haiku-4.5,6.448,✅
+347,Claude-Opus-4.6,0.622,❌ ()
+347,DeepSeek-2025-10,0.016,❌ ()
+347,DeepSeek-V3.2,1.038,❌ ()
+347,Gemini-3.1-Pro,0.011,❌ ()
+347,Gemini-Flash-2.5-pro,0.011,❌ ()
+357,ChatGPT-5.4,35.503,✅
+357,ChatGPT-5,0.028,❌ ()
+357,Claude-Haiku-4.5,0.037,❌ ()
+357,Claude-Opus-4.6,0.021,❌ ()
+357,DeepSeek-2025-10,0.022,❌ ()
+357,DeepSeek-V3.2,1.358,❌ ()
+357,Gemini-3.1-Pro,0.022,❌ ()
+357,Gemini-Flash-2.5-pro,0.025,❌ ()
+399,ChatGPT-5.4,42.817,✅
+399,ChatGPT-5,0.016,❌ ()
 399,Claude-Haiku-4.5,timeout,❌ (Time Out)
-399,Claude-Opus-4.6,4.958,✅
-399,DeepSeek-2025-10,timeout,❌ (Time Out)
-399,DeepSeek-V3.2,8.11,❌ ()
-399,Gemini-3.1-Pro,6.442,✅
-399,Gemini-Flash-2.5-pro,9.092,"❌ (9158128796692261,3.1e27328088)"
+399,Claude-Opus-4.6,0.019,❌ ()
+399,DeepSeek-2025-10,0.019,❌ ()
+399,DeepSeek-V3.2,0.019,❌ ()
+399,Gemini-3.1-Pro,0.037,❌ ()
+399,Gemini-Flash-2.5-pro,0.496,❌ ()
 439,ChatGPT-5.4,timeout,❌ (Time Out)
-439,ChatGPT-5,436.072,❌ ()
-439,Claude-Haiku-4.5,timeout,❌ (Time Out)
-439,Claude-Opus-4.6,86.283,❌ (468697378)
-439,DeepSeek-2025-10,2.166,❌ ()
-439,DeepSeek-V3.2,597.366,❌ ()
-439,Gemini-3.1-Pro,302.967,✅
-439,Gemini-Flash-2.5-pro,0.943,❌ ()
-493,ChatGPT-5.4,0.611,✅
-493,ChatGPT-5,0.758,✅
-493,Claude-Haiku-4.5,0.613,✅
-493,Claude-Opus-4.6,0.579,✅
-493,DeepSeek-2025-10,0.545,✅
-493,DeepSeek-V3.2,0.654,✅
-493,Gemini-3.1-Pro,0.641,✅
-493,Gemini-Flash-2.5-pro,0.8,✅
-502,ChatGPT-5.4,165.262,❌ (425775940)
-502,ChatGPT-5,0.522,❌ ()
-502,Claude-Haiku-4.5,182.534,"❌ (Test cases:
+439,ChatGPT-5,430.675,❌ ()
+439,Claude-Haiku-4.5,0.133,❌ ()
+439,Claude-Opus-4.6,0.017,❌ ()
+439,DeepSeek-2025-10,0.52,❌ ()
+439,DeepSeek-V3.2,1.477,❌ ()
+439,Gemini-3.1-Pro,17.374,❌ ()
+439,Gemini-Flash-2.5-pro,0.187,❌ ()
+493,ChatGPT-5.4,0.014,✅
+493,ChatGPT-5,0.019,✅
+493,Claude-Haiku-4.5,0.015,✅
+493,Claude-Opus-4.6,0.014,✅
+493,DeepSeek-2025-10,0.019,✅
+493,DeepSeek-V3.2,0.016,✅
+493,Gemini-3.1-Pro,0.021,✅
+493,Gemini-Flash-2.5-pro,0.014,✅
+502,ChatGPT-5.4,76.412,❌ (425775940)
+502,ChatGPT-5,0.015,❌ ()
+502,Claude-Haiku-4.5,103.458,"❌ (Test cases:
 F(4, 2) = 10 (expected: 10)
 F(13, 10) = 3729050610636 (expected: 3729050610636)
 F(10, 13) = 37959702514 (expected: 37959702514)
@@ -120,56 +117,56 @@ The problem requires advanced techniques such as:
 - Shape-based configuration enumeration
 - Generating functions for configuration counting
 - Mathematical optimization for specific problem structure)"
-502,Claude-Opus-4.6,16.177,✅
-502,DeepSeek-2025-10,0.434,❌ (21569431)
-502,DeepSeek-V3.2,59.649,❌ (366323723)
-502,Gemini-3.1-Pro,51.52,✅
-502,Gemini-Flash-2.5-pro,0.803,❌ (525741794)
-505,ChatGPT-5.4,0.705,❌ (739216669546875214)
+502,Claude-Opus-4.6,0.02,❌ ()
+502,DeepSeek-2025-10,0.016,❌ (21569431)
+502,DeepSeek-V3.2,0.017,❌ ()
+502,Gemini-3.1-Pro,0.059,❌ ()
+502,Gemini-Flash-2.5-pro,0.069,❌ (525741794)
+505,ChatGPT-5.4,0.017,❌ (739216669546875214)
 505,ChatGPT-5,timeout,❌ (Time Out)
 505,Claude-Haiku-4.5,timeout,❌ (Time Out)
-505,Claude-Opus-4.6,56.162,❌ ()
-505,DeepSeek-2025-10,0.383,❌ ()
-505,DeepSeek-V3.2,0.373,❌ (739216669546875214)
-505,Gemini-3.1-Pro,timeout,❌ (Time Out)
-505,Gemini-Flash-2.5-pro,1.087,❌ (944972997119722000)
-54,ChatGPT-5.4,1.079,❌ ()
-54,ChatGPT-5,1.169,❌ ()
-54,Claude-Haiku-4.5,0.607,❌ ()
-54,Claude-Opus-4.6,0.479,❌ ()
-54,DeepSeek-2025-10,0.807,❌ ()
-54,DeepSeek-V3.2,0.802,❌ ()
-54,Gemini-3.1-Pro,1.287,✅
-54,Gemini-Flash-2.5-pro,0.903,❌ ()
-74,ChatGPT-5.4,25.475,✅
-74,ChatGPT-5,9.412,✅
-74,Claude-Haiku-4.5,11.09,✅
-74,Claude-Opus-4.6,11.147,✅
-74,DeepSeek-2025-10,17.471,✅
-74,DeepSeek-V3.2,8.335,✅
-74,Gemini-3.1-Pro,7.604,✅
-74,Gemini-Flash-2.5-pro,10.747,✅
-81,ChatGPT-5.4,1.079,✅
-81,ChatGPT-5,0.728,❌ ()
-81,Claude-Haiku-4.5,1.093,✅
-81,Claude-Opus-4.6,0.831,❌ ()
-81,DeepSeek-2025-10,0.893,❌ ()
-81,DeepSeek-V3.2,1.029,✅
-81,Gemini-3.1-Pro,0.941,❌ ()
-81,Gemini-Flash-2.5-pro,0.919,❌ ()
-92,ChatGPT-5.4,0.962,✅
+505,Claude-Opus-4.6,0.205,❌ ()
+505,DeepSeek-2025-10,0.019,❌ ()
+505,DeepSeek-V3.2,0.018,❌ (739216669546875214)
+505,Gemini-3.1-Pro,0.093,❌ ()
+505,Gemini-Flash-2.5-pro,0.017,❌ (944972997119722000)
+54,ChatGPT-5.4,0.094,✅
+54,ChatGPT-5,0.105,✅
+54,Claude-Haiku-4.5,0.051,✅
+54,Claude-Opus-4.6,0.048,✅
+54,DeepSeek-2025-10,0.019,❌ ()
+54,DeepSeek-V3.2,0.05,✅
+54,Gemini-3.1-Pro,0.205,❌ ()
+54,Gemini-Flash-2.5-pro,0.019,❌ ()
+74,ChatGPT-5.4,5.774,✅
+74,ChatGPT-5,2.885,✅
+74,Claude-Haiku-4.5,0.061,❌ ()
+74,Claude-Opus-4.6,2.535,✅
+74,DeepSeek-2025-10,0.017,❌ ()
+74,DeepSeek-V3.2,1.461,✅
+74,Gemini-3.1-Pro,3.014,✅
+74,Gemini-Flash-2.5-pro,4.006,❌ ()
+81,ChatGPT-5.4,0.079,✅
+81,ChatGPT-5,0.025,❌ ()
+81,Claude-Haiku-4.5,0.121,❌ (Error: Could not load matrix.txt)
+81,Claude-Opus-4.6,0.017,❌ ()
+81,DeepSeek-2025-10,0.015,❌ ()
+81,DeepSeek-V3.2,0.02,✅
+81,Gemini-3.1-Pro,0.017,❌ ()
+81,Gemini-Flash-2.5-pro,0.015,❌ ()
+92,ChatGPT-5.4,0.018,✅
 92,ChatGPT-5,timeout,❌ (Time Out)
-92,Claude-Haiku-4.5,75.862,✅
-92,Claude-Opus-4.6,54.371,✅
-92,DeepSeek-2025-10,12.213,❌ (8581133)
-92,DeepSeek-V3.2,7.473,✅
-92,Gemini-3.1-Pro,0.975,✅
-92,Gemini-Flash-2.5-pro,4.843,✅
-99,ChatGPT-5.4,0.788,✅
-99,ChatGPT-5,0.789,❌ ()
-99,Claude-Haiku-4.5,0.763,❌ ()
-99,Claude-Opus-4.6,0.811,✅
-99,DeepSeek-2025-10,0.773,❌ ()
-99,DeepSeek-V3.2,0.787,❌ ()
-99,Gemini-3.1-Pro,0.803,✅
-99,Gemini-Flash-2.5-pro,0.549,❌ ()
+92,Claude-Haiku-4.5,25.781,✅
+92,Claude-Opus-4.6,15.062,✅
+92,DeepSeek-2025-10,0.027,❌ ()
+92,DeepSeek-V3.2,0.11,❌ ()
+92,Gemini-3.1-Pro,0.035,✅
+92,Gemini-Flash-2.5-pro,0.075,❌ (0)
+99,ChatGPT-5.4,0.049,✅
+99,ChatGPT-5,0.02,❌ ()
+99,Claude-Haiku-4.5,0.02,❌ ()
+99,Claude-Opus-4.6,0.181,✅
+99,DeepSeek-2025-10,0.051,❌ ()
+99,DeepSeek-V3.2,0.023,✅
+99,Gemini-3.1-Pro,0.116,❌ ()
+99,Gemini-Flash-2.5-pro,0.02,❌ ()
